@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react' //Para guardar la información suministrada por la API. Con useEffect se busca el consumo de la API
 import Layout from '../../Components/Layout'
 import Card from '../../Components/Card'
+import ProductDetail from '../../Components/ProductDetail'
 
 function Home() {
   const [items, setItems] = useState(null)
@@ -21,7 +22,7 @@ function Home() {
               ))
           }
         </div>
-        
+        <ProductDetail />
         
       </Layout>
     )
