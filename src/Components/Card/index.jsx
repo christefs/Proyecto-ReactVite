@@ -18,6 +18,7 @@ const Card = (data) => {
         
     }
 
+    //La siguiente función bloquea la posibilidad de añadir un producto más de una vez
     const renderIcon = (id) => {
         const isInCart = context.cartProducts.filter(product => product.id === id).length > 0
         
@@ -28,7 +29,7 @@ const Card = (data) => {
                     <CheckIcon className="h-6 w-6 text-white" />
                 </div>
                 )
-        }
+        }//Si el producto ya está en el carrito le pone el ícono de check a la card y no le permite añadirlo nuevamente
         else {
             return (
             <div 
@@ -37,7 +38,7 @@ const Card = (data) => {
                 +
             </div>
             )
-        }
+        }//Si el producto no se encuentra aun en el carrito le pone el ícono de Añadir (+) a la card
         
     }
 
