@@ -28,6 +28,9 @@ setParámetro: Modificación
     //Shopping cart - Adicionar productos al carrito
     const [cartProducts, setCartProducts] = useState([]) //Inicializa el estado con un array vacío para contener las diferentes cantidades de la compra
 
+    //Shopping Cart . Order
+    const [order, setOrder] = useState([])
+
     return (
         <ShoppingCartContext.Provider value={{
             count,
@@ -41,7 +44,9 @@ setParámetro: Modificación
             setCartProducts,
             isCheckoutSideMenuOpen,
             openCheckoutSideMenu,
-            closeCheckoutSideMenu
+            closeCheckoutSideMenu,
+            order,
+            setOrder
         }}>
             {children}
         </ShoppingCartContext.Provider>
