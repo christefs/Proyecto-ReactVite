@@ -24,6 +24,7 @@ const CheckoutSideMenu = () => {
 
         context.setOrder([...context.order, orderToAdd])
         context.setCartProducts([])
+        context.setSearchByTitle(null) //Limpia los caracteres en la entrada de búsqueda para que no se almacenen y se pueda regresar a la totalidad de elementos
     }
 
     return (

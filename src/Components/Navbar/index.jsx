@@ -18,7 +18,8 @@ const Navbar = () => {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/all'
+                    <NavLink to='/'
+                    onClick = {() => context.setSearchByCategory()}
                     className={({ isActive }) =>
                     isActive ? activeStyle : undefined
                   }>
@@ -27,6 +28,7 @@ const Navbar = () => {
                 </li>
                 <li>
                     <NavLink to='/clothes'
+                    onClick = {() => context.setSearchByCategory('clothes')}
                     className={({ isActive }) =>
                     isActive ? activeStyle : undefined
                   }>
@@ -35,6 +37,7 @@ const Navbar = () => {
                 </li>
                 <li>
                     <NavLink to='/electronics'
+                    onClick = {() => context.setSearchByCategory('electronics')}
                     className={({ isActive }) =>
                     isActive ? activeStyle : undefined
                   }>
@@ -43,6 +46,7 @@ const Navbar = () => {
                 </li>
                 <li>
                     <NavLink to='/furnitures'
+                    onClick = {() => context.setSearchByCategory('furnitures')}
                     className={({ isActive }) =>
                     isActive ? activeStyle : undefined
                   }>
@@ -51,6 +55,7 @@ const Navbar = () => {
                 </li>
                 <li>
                     <NavLink to='/toys'
+                    onClick = {() => context.setSearchByCategory('toys')}
                     className={({ isActive }) =>
                     isActive ? activeStyle : undefined
                   }>
@@ -59,6 +64,7 @@ const Navbar = () => {
                 </li>
                 <li>
                     <NavLink to='/others'
+                    onClick = {() => context.setSearchByCategory('others')}
                     className={({ isActive }) =>
                     isActive ? activeStyle : undefined
                   }>
@@ -95,10 +101,10 @@ const Navbar = () => {
                         Sign In                        
                     </NavLink>
                 </li>
-                <li className='flex'>
+                <li className='flex items-center'>
                     
                     <ShoppingCartIcon className="h-6 w-6 text-black"></ShoppingCartIcon>
-                    <div>{context.count}</div>
+                    <div>{context.cartProducts.length}</div>
                 </li>
 
             </ul>
